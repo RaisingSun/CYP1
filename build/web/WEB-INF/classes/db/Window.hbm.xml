@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-9-19 19:58:32 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="db.Window" table="window" catalog="hehe">
+        <id name="cno" type="string">
+            <column name="cNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="cname" type="string">
+            <column name="cName" not-null="true" />
+        </property>
+        <property name="picture" type="string">
+            <column name="picture" />
+        </property>
+        <set name="peopleactions" inverse="true">
+            <key>
+                <column name="cNo" not-null="true" />
+            </key>
+            <one-to-many class="db.Peopleaction" />
+        </set>
+        <set name="disheses" inverse="true">
+            <key>
+                <column name="cNo" not-null="true" />
+            </key>
+            <one-to-many class="db.Dishes" />
+        </set>
+    </class>
+</hibernate-mapping>

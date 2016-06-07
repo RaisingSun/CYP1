@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* IE Fix */
+button {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=2, Color=#ccc);
+}
+#footer button {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=2, Color=#000);
+}
+button.dark {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=2, Color=#000);
+}
+.buttonone {
+	box-shadow:0px 1px 2px #CCC;
+}
+.nivo-controlNav {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#000);
+}
+.welcome {
+	box-shadow:0px 0px 2px #ccc;
+}
+.welc-text ul{
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=2, Color=#ccc);
+}
+.notification {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=2, Color=#ccc);
+}
+a#logoPrevious {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#ccc);
+}
+a#logoNext {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#ccc);
+}
+.about-author {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#ccc);
+}
+.single-event .venu-map{
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=3, Color=#ccc);
+}
+#gallery {
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#ccc);
+}
+.contactus .sunday-service{
+	zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=2, Color=#ccc);
+}

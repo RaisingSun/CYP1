@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>店铺 - ClearYourPlate</title>
+        <!--// Stylesheets //-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/color.css" rel="stylesheet" type="text/css" />
+        <link href="css/cascade.css" rel="stylesheet" type="text/css" />
+
+        <!--[if IE 8 ]><link href="css/iefix.css" rel="stylesheet" type="text/css" /><![endif]-->
+        <!--// Javascripts //-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/animatedcollapse.js"></script>
+        <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+        <script type="text/javascript" src="js/jquery.infinite-carousel.js"></script>
+        <script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <div id="top-bar">
+            <div class="inner">
+                <!-- Top Bar Posts Start -->
+                <div class="small-posts">
+                    <p> BUPT SSE</p>
+                </div>
+                <!-- Top Bar Posts End -->
+                <!-- Top Links Start -->
+                <h:form>
+                    <div class="toplinks">
+                        <a href="javascript:animatedcollapse.toggle('loginbox')" class="loginbtn">#{userController.loginStatus}</a>
+
+                        <c:if test="#{!userController.login}" >
+                            <div id="loginbox">
+                                <h3 class="upper">用户登录</h3>
+                                <ul>
+                                    <li class="name">
+                                        <h:inputText class="bar" id="inputname" value="#{userController.inputName}" p:placeholder="账号" />
+                                    </li>
+                                    <li class="password">
+                                        <h:inputSecret class="bar" id="inputpw" value="#{userController.inputPassword}" p:placeholder="密码" />
+                                    </li>
+                                </ul>
+                                <div class="btns-sec">
+                                    <h:commandButton id="btn_login" class="backcolr dark" value="登录" accesskey="13" actionListener="#{userController.pressLoginBtn}" />
+                                </div>
+                            </div>
+                        </c:if>
+
+                        <!-- Login Box End -->
+                    </div>
+                </h:form>
+                <!-- Top Links End -->
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Top Bar End -->
+
+
+
+        <!-- Header Start -->
+        <div id="header">
+            <div class="inner">
+                <!-- Top Header Section Start -->
+                <div class="top-head">
+                    <!-- Logo Start -->
+                    <div class = "logo"><a href = "index.xhtml"><img src="images/ourlogo.png" alt=""/></a></div>
+                    <!-- Logo End -->
+                    <!-- Right Section Start -->
+                    <div class="right-sec">
+                        <!-- Search Start -->
+                        <div class="search">
+                            <h5>Search Now</h5>
+                            <ul>
+                                <li><input type="text" class="bar" /></li>
+                                <li><input type="button" class="go backcolr" value="Go" /></li>
+                            </ul>
+                        </div>
+                        <!-- Search End -->
+                    </div>
+                    <!-- Right Section End -->
+
+
+                    <div class="clear"></div>
+                </div>
+                <!-- Top Header Section End -->
+                <div class="clear"></div>
+                <!-- Navigation Start -->
+                <div class="navigation bordercolr">
+                    <div id="smoothmenu1" class="ddsmoothmenu">
+                        <ul>
+                            <li><a href="index.xhtml">主页</a></li>
+                            <li class= "current-menu-item"><a href="shop.xhtml">店铺</a></li>
+                            <li><a href="#{userController.infopage}">个人信息</a></li>
+                            <li><a href="land.xhtml">留言</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!-- Navigation End -->
+                <div class="clear"></div>
+                <!-- Banner Section Start -->
+
+            </div>
+        </div>
+        <!-- Header End -->
+        <!-- Content Section Start -->
+        <div id="contentsec">
+            <div class="inner">
+                <!-- Notification Start -->
+                <div class="notification">
+                    <h4 class="badge">店铺</h4>
+                    <div class="notif-data">
+                        <div class="desc">
+                            <h4 class="colr">下面是店铺们</h4>
+                            <p>可以查看每个店铺的菜式</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification End -->
+                <!-- Advertisment Banners Section Start -->
+                <div id="wrapper">
+                    <div class="advert-banners">
+                        <div class="brand-list">
+                            <div class="brand-bd" id="brand-waterfall">
+                                <!-- 循环字母模块 item -->
+                                <c:forEach var="item" items="#{windowController.window_list}">
+                                    <div class="item">
+                                        <h3>#{item.cname}</h3>
+                                        <p><a href="#" ><img class="picsize" src="#{item.picture}" alt="DISH1"/></a></p>
+                                        <c:forEach var="dish1" items="#{item.disheses}">
+                                            <p><a href="#" >#{dish1.dname} ￥#{dish1.price}</a></p>
+                                        </c:forEach>
+                                    </div>
+                                </c:forEach>
+                            </div>
+                        </div>
+                        <!-- 列表 end -->
+                    </div>
+                </div>
+            </div>
+            <!-- Adcertisement Banners Section End -->
+            <div class="clear"></div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/cascade.js"></script>
+        <script type="text/javascript">
+            $('#brand-waterfall').cascade();
+        </script>
+    </body>
+</html>

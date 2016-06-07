@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="hehe"/>
+  <table-filter match-name="message"/>
+  <table-filter match-name="window"/>
+  <table-filter match-name="dishes"/>
+  <table-filter match-name="peopleaction"/>
+  <table-filter match-name="information"/>
+</hibernate-reverse-engineering>

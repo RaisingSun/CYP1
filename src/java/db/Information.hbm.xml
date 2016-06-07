@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-9-19 19:58:32 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="db.Information" table="information" catalog="hehe">
+        <id name="sno" type="string">
+            <column name="sNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" precision="22" scale="0" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="Birthday" />
+        </property>
+        <property name="school" type="string">
+            <column name="school" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" />
+        </property>
+        <property name="grade" type="string">
+            <column name="grade" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <set name="peopleactions" inverse="true">
+            <key>
+                <column name="sNo" not-null="true" />
+            </key>
+            <one-to-many class="db.Peopleaction" />
+        </set>
+        <set name="messages" inverse="true">
+            <key>
+                <column name="sNo" not-null="true" />
+            </key>
+            <one-to-many class="db.Message" />
+        </set>
+    </class>
+</hibernate-mapping>
